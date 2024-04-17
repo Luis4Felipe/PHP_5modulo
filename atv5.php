@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -55,12 +55,9 @@
         </form>
         
         <?php
-        // Verifica se o número foi enviado através do método POST
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Obtém o número enviado pelo formulário
             $numero = $_POST["numero"];
             
-            // Função para calcular o fatorial
             function calcularFatorial($numero) {
                 $fatorial = 1;
                 for ($i = 2; $i <= $numero; $i++) {
@@ -69,7 +66,6 @@
                 return $fatorial;
             }
             
-            // Chamada da função e exibição do resultado
             $resultado = calcularFatorial($numero);
             echo "<p>O fatorial de $numero é: $resultado</p>";
         }
