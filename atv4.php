@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -62,16 +62,13 @@
             
             <input type="submit" value="Gerar Tabuada">
         </form>
-        
+
         <?php
-        // Verifica se o número foi enviado através do método POST
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Obtém o número enviado pelo formulário
             $numero = $_POST["numero"];
             
             echo "<h3>Tabuada do $numero:</h3>";
             echo "<table>";
-            // Loop para gerar a tabuada de 0 a 10
             for ($i = 0; $i <= 10; $i++) {
                 $resultado = $numero * $i;
                 echo "<tr><td>$numero x $i =</td><td>$resultado</td></tr>";
